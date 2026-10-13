@@ -1,0 +1,58 @@
+name: MIB — contrôle et déploiement
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Contrôles (PHP, budgets des assets)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: none
+
+      - name: Syntaxe PHP
+        run: find theme server -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: Budgets des assets
+        run: bash tools/check-budgets.sh
+
+  deploy:
+    name: Déploiement OVH (SSH + rsync)
+    needs: check
+    # Activé uniquement quand la variable de dépôt DEPLOY_ENABLED vaut "true".
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    env:
+      SSH_HOST: ${{ secrets.OVH_SSH_HOST }}
+      SSH_USER: ${{ secrets.OVH_SSH_USER }}
+      WP_PATH: ${{ secrets.OVH_WP_PATH }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clé SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.OVH_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
+
+      - name: Thème MIB
+        run: rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" theme/mib/ "$SSH_USER@$SSH_HOST:$WP_PATH/wp-content/themes/mib/"
+
+      - name: Fichiers racine (.htaccess, robots.txt, llms.txt, wp-config-mib.php)
+        run: rsync -az -e "ssh -i ~/.ssh/id_ed25519" server/.htaccess server/robots.txt server/llms.txt server/wp-config-mib.php "$SSH_USER@$SSH_HOST:$WP_PATH/"
+
+      - name: Purge du cache de pages
+        run: ssh -i ~/.ssh/id_ed25519 "$SSH_USER@$SSH_HOST" "find '$WP_PATH/wp-content/cache/mib' -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} + 2>/dev/null; true"

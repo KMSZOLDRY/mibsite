@@ -1,0 +1,22 @@
+# MIB (Maninback)
+
+> MIB est une agence d'ingénierie numérique basée à Toulouse (France). Elle conçoit des infrastructures logicielles, des systèmes d'IA agentiques et des interfaces accessibles, et accompagne les organisations sur la RSE et la qualité de vie au travail, y compris sur site. Promesse : « L'excellence numérique est humaine. »
+
+Le site lui-même est éco-conçu : pages texte de moins de 150 Ko, aucun script tiers, police auto-hébergée.
+
+## Expertises
+
+- [Core Engineering & Architecture](https://maninback.com/core-engineering-architecture/): architecture logicielle, JVM/Kotlin, GraalVM, Go, Rust, Python, cloud, CI/CD, réduction de la dette technique.
+- [Data, AI & Agentic Systems](https://maninback.com/data-ai-intelligent-systems/): LLM en production, agents autonomes, RAG, pipelines de données, streaming, MLOps/LLMOps, gouvernance de l'IA.
+- [Interface, Experiences & Security](https://maninback.com/interface-experiences-security/): performance web, design systems, accessibilité RGAA/WCAG, secure-by-design, RGPD.
+- [RSE & Performance Humaine](https://maninback.com/rse-culture-facteur-humain/): audits d'éco-conception, qualité de vie au travail, réduction de la fatigue numérique, intervention sur site.
+
+## Contact
+
+- E-mail : contact@maninback.com (réponse sous 24 heures ouvrées)
+- Rendez-vous : https://cal.com/maninback/audit (audit technique de 15 minutes)
+
+## Optionnel
+
+- [Blog](https://maninback.com/blog/): analyses et retours de terrain.
+- [Mentions légales](https://maninback.com/mentions-legales/)

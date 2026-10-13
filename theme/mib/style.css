@@ -1,0 +1,13 @@
+/*
+Theme Name: MIB
+Theme URI: https://maninback.com
+Author: MIB — Maninback
+Description: Thème sur mesure éco-conçu de l'agence MIB. Texte comme design, zéro dépendance tierce, budget 150 Ko par page.
+Version: 1.0.0
+Requires at least: 6.4
+Requires PHP: 8.1
+Text Domain: mib
+Update URI: false
+*/
+
+/* Les styles sont dans assets/css/mib.css (chargé avec un numéro de version). */

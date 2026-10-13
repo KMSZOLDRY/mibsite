@@ -1,0 +1,16 @@
+name: MIB — cron WordPress
+
+# Le cache statique empêche les visites de réveiller WordPress :
+# ce déclencheur horaire assure les tâches planifiées (mises à jour auto, articles programmés).
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+jobs:
+  wp-cron:
+    if: vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Appel de wp-cron.php
+        run: curl -fsS --max-time 60 "https://maninback.com/wp-cron.php?doing_wp_cron" -o /dev/null
