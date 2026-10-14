@@ -25,9 +25,10 @@ add_action(
 		add_theme_support(
 			'editor-color-palette',
 			array(
-				array( 'name' => 'Noir minéral', 'slug' => 'ink', 'color' => '#0D0D0D' ),
-				array( 'name' => 'Blanc', 'slug' => 'paper', 'color' => '#F5F5F5' ),
-				array( 'name' => 'Gris clair', 'slug' => 'muted', 'color' => '#B3B3B3' ),
+				array( 'name' => 'Noir profond', 'slug' => 'bg', 'color' => '#0B0B0B' ),
+				array( 'name' => 'Ivoire', 'slug' => 'ivory', 'color' => '#F5F5F0' ),
+				array( 'name' => 'Or', 'slug' => 'gold', 'color' => '#D4AF37' ),
+				array( 'name' => 'Vert sauge', 'slug' => 'sage', 'color' => '#8FAE7B' ),
 			)
 		);
 		remove_theme_support( 'core-block-patterns' );
@@ -138,11 +139,11 @@ add_action(
 		foreach ( array( '800', '400' ) as $w ) {
 			printf(
 				'<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n",
-				esc_url( MIB_URI . '/assets/fonts/inter-' . $w . '.woff2' )
+				esc_url( MIB_URI . '/assets/fonts/montserrat-' . $w . '.woff2' )
 			);
 		}
-		echo '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%230D0D0D%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27%2300FF66%27/%3E%3C/svg%3E">' . "\n";
-		echo '<meta name="theme-color" content="#0D0D0D">' . "\n";
+		echo '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%230B0B0B%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27%23D4AF37%27/%3E%3C/svg%3E">' . "\n";
+		echo '<meta name="theme-color" content="#0B0B0B">' . "\n";
 	},
 	1
 );

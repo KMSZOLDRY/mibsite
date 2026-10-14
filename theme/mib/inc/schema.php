@@ -17,7 +17,8 @@ function mib_print_schema() {
 		'@type'         => 'ProfessionalService',
 		'@id'           => $org_id,
 		'name'          => $brand['name'],
-		'alternateName' => array( $brand['long_name'], 'Man in Back' ),
+		'alternateName' => array( $brand['long_name'], 'Maninback' ),
+		'slogan'        => implode( ' ', $brand['signature'] ),
 		'url'           => $home,
 		'email'         => $brand['email'],
 		'description'   => $brand['description'],
@@ -29,15 +30,15 @@ function mib_print_schema() {
 		),
 		'areaServed'    => array( '@type' => 'Country', 'name' => 'France' ),
 		'knowsAbout'    => array(
-			'Architecture logicielle',
-			'Intelligence artificielle et systèmes agentiques',
-			'Large Language Models (LLM)',
-			'Data engineering et MLOps',
-			'Éco-conception web',
-			'Accessibilité numérique (RGAA)',
-			'Sécurité applicative',
+			'Performance humaine et coaching',
+			'Préparation physique et mentale',
 			'Responsabilité sociétale des entreprises (RSE)',
 			'Qualité de vie au travail (QVT)',
+			'Transformation digitale',
+			'Intelligence artificielle',
+			'Data et infrastructure informatique',
+			'Création de sites web et applications',
+			'Design, graphisme et marketing digital',
 		),
 	);
 
@@ -58,7 +59,7 @@ function mib_print_schema() {
 		}
 		$org['hasOfferCatalog'] = array(
 			'@type'           => 'OfferCatalog',
-			'name'            => 'Expertises MIB',
+			'name'            => "Leviers d'intervention MIB",
 			'itemListElement' => $offers,
 		);
 		$graph[] = $org;
@@ -120,7 +121,7 @@ add_action(
 		} elseif ( is_singular() ) {
 			$desc = wp_strip_all_tags( get_the_excerpt( get_queried_object() ) );
 		} elseif ( is_home() ) {
-			$desc = "Analyses et retours de terrain de l'équipe MIB : architecture, IA, sobriété numérique, performance humaine.";
+			$desc = "Analyses et retours de terrain des Man in Back : performance humaine, qualité de vie au travail, IA, web et outils numériques.";
 		}
 		if ( $desc ) {
 			printf( '<meta name="description" content="%s">' . "\n", esc_attr( wp_html_excerpt( $desc, 160, '…' ) ) );

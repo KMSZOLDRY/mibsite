@@ -79,7 +79,8 @@ function mib_current_expertise() {
 	}
 	$index = array_search( $slug, array_keys( $list ), true );
 	return $list[ $slug ] + array(
-		'slug'  => $slug,
+		'slug'        => $slug,
+		'group_label' => mib_cfg( 'groups' )[ $list[ $slug ]['group'] ] ?? '',
 		'index' => $index + 1,
 		'total' => count( $list ),
 	);
@@ -98,4 +99,41 @@ function mib_expertise_url( $slug ) {
 function mib_reading_time( $post = null ) {
 	$words = str_word_count( wp_strip_all_tags( get_post_field( 'post_content', $post ) ) );
 	return max( 1, (int) round( $words / 200 ) );
+}
+
+/**
+ * Logo typographique : « MIB » doré (dégradé CSS) + « Man in Back ».
+ */
+function mib_logo( $current = false ) {
+	return sprintf(
+		'<a class="logo" href="%s"%s><span class="logo-mark">MIB</span><span class="logo-sub">Man in Back</span><span class="sr-only"> — accueil</span></a>',
+		esc_url( home_url( '/' ) ),
+		$current ? ' aria-current="page"' : ''
+	);
+}
+
+/**
+ * Bouton d'appel à l'action unique (Cal.com) + ligne de réassurance.
+ */
+function mib_cta_button( $with_note = true, $class = '' ) {
+	$cta = mib_cfg( 'cta' );
+	$out = sprintf(
+		'<a class="btn %s" href="%s" rel="noopener" target="_blank">%s %s<span class="sr-only"> (nouvel onglet)</span></a>',
+		esc_attr( $class ),
+		esc_url( mib_cfg( 'brand' )['cal_url'] ),
+		esc_html( $cta['label'] ),
+		mib_icon( 'arrow' )
+	);
+	if ( $with_note ) {
+		$out .= '<p class="btn-note">' . esc_html( $cta['note'] ) . '</p>';
+	}
+	return $out;
+}
+
+/**
+ * Signature de marque sur deux lignes (ivoire + sauge).
+ */
+function mib_signature( $tag = 'p' ) {
+	$s = mib_cfg( 'brand' )['signature'];
+	return sprintf( '<%1$s class="signature">%2$s <span>%3$s</span></%1$s>', tag_escape( $tag ), esc_html( $s[0] ), esc_html( $s[1] ) );
 }

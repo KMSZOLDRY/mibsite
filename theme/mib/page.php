@@ -17,7 +17,7 @@ while ( have_posts() ) :
 	<article class="page wrap-text">
 		<?php if ( $mib_x ) : ?>
 			<nav class="crumbs" aria-label="Fil d'Ariane">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">MIB</a> <span aria-hidden="true">/</span> <span>Expertise <?php echo esc_html( sprintf( '%02d', $mib_x['index'] ) ); ?></span>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">MIB</a> <span aria-hidden="true">/</span> <span>Levier <?php echo esc_html( strtolower( $mib_x['group_label'] ) ); ?></span>
 			</nav>
 		<?php endif; ?>
 
@@ -35,13 +35,13 @@ while ( have_posts() ) :
 
 		<?php if ( $mib_x ) : ?>
 			<aside class="inline-cta" aria-labelledby="titre-cta-page">
-				<h2 id="titre-cta-page" class="label">Parlons de votre contexte</h2>
-				<p>Un échange de 15 minutes avec un ingénieur MIB pour qualifier votre besoin.</p>
-				<p><?php echo mib_cal_link( 'Planifier un audit technique', 'link-cta' ); // phpcs:ignore ?></p>
+				<h2 id="titre-cta-page" class="inline-cta-title">Où agir en premier ?</h2>
+				<p>En 15 minutes, nous regardons votre situation et vous indiquons la priorité.</p>
+				<div><?php echo mib_cta_button(); // phpcs:ignore ?></div>
 			</aside>
 
 			<nav class="related" aria-labelledby="titre-autres">
-				<h2 id="titre-autres" class="label">Autres expertises</h2>
+				<h2 id="titre-autres" class="label">Autres leviers</h2>
 				<ul>
 					<?php foreach ( mib_cfg( 'expertises' ) as $mib_slug => $mib_e ) : ?>
 						<?php

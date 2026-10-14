@@ -1,22 +1,22 @@
-# MIB (Maninback)
+# MIB — Man in Back
 
-> MIB est une agence d'ingénierie numérique basée à Toulouse (France). Elle conçoit des infrastructures logicielles, des systèmes d'IA agentiques et des interfaces accessibles, et accompagne les organisations sur la RSE et la qualité de vie au travail, y compris sur site. Promesse : « L'excellence numérique est humaine. »
+> MIB (Man in Back) est un système d'anticipation et d'intervention Humain × Digital basé à Toulouse (France). MIB relie la performance des équipes et celle des outils numériques : il mesure, repère les signaux faibles, envoie le bon spécialiste (coach, préparateur physique et mental, ingénieur, développeur, designer, marketeur), puis remesure. Promesse : « Voir plus tôt. Comprendre plus vite. Agir au bon endroit. » Signature : « Rendre visible l'intelligence qui agit derrière la performance. »
 
-Le site lui-même est éco-conçu : pages texte de moins de 150 Ko, aucun script tiers, police auto-hébergée.
+Clients visés : auto-entrepreneurs, TPE et PME. Méthode : Mesurer · Comprendre · Intervenir · Adapter. Aucune donnée personnelle conservée ; restitution en tendances anonymes.
 
-## Expertises
+## Leviers d'intervention
 
-- [Core Engineering & Architecture](https://maninback.com/core-engineering-architecture/): architecture logicielle, JVM/Kotlin, GraalVM, Go, Rust, Python, cloud, CI/CD, réduction de la dette technique.
-- [Data, AI & Agentic Systems](https://maninback.com/data-ai-intelligent-systems/): LLM en production, agents autonomes, RAG, pipelines de données, streaming, MLOps/LLMOps, gouvernance de l'IA.
-- [Interface, Experiences & Security](https://maninback.com/interface-experiences-security/): performance web, design systems, accessibilité RGAA/WCAG, secure-by-design, RGPD.
-- [RSE & Performance Humaine](https://maninback.com/rse-culture-facteur-humain/): audits d'éco-conception, qualité de vie au travail, réduction de la fatigue numérique, intervention sur site.
+- [Performance humaine](https://maninback.com/performance-humaine/): coaching individuel et collectif, préparation physique et mentale, stress et récupération, pour dirigeants et équipes.
+- [RSE & qualité de vie au travail](https://maninback.com/rse-qualite-de-vie-au-travail/): diagnostic RSE, qualité de vie au travail, accompagnement des managers, sobriété numérique.
+- [Ingénierie, data & IA](https://maninback.com/ingenierie-data-ia/): intégration de l'IA, automatisation, data, réseaux, infrastructure, sécurité.
+- [Web, design & communication](https://maninback.com/web-design-communication/): sites et applications, identité visuelle, graphisme, référencement, marketing.
 
 ## Contact
 
+- Diagnostic gratuit de 15 minutes, sans engagement : https://cal.com/maninback/audit
 - E-mail : contact@maninback.com (réponse sous 24 heures ouvrées)
-- Rendez-vous : https://cal.com/maninback/audit (audit technique de 15 minutes)
 
 ## Optionnel
 
-- [Blog](https://maninback.com/blog/): analyses et retours de terrain.
+- [Blog](https://maninback.com/blog/)
 - [Mentions légales](https://maninback.com/mentions-legales/)

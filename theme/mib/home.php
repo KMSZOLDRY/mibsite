@@ -12,7 +12,7 @@ $mib_posts_page = get_option( 'page_for_posts' );
 <section class="blog wrap-text" aria-labelledby="titre-blog">
 	<header class="page-head">
 		<h1 id="titre-blog" class="page-title"><?php echo esc_html( $mib_posts_page ? get_the_title( $mib_posts_page ) : 'Blog' ); ?></h1>
-		<p class="page-lead">Analyses et retours de terrain de l'équipe MIB : architecture, IA, sobriété numérique, performance humaine.</p>
+		<p class="page-lead">Analyses et retours de terrain des Man in Back : performance humaine, qualité de vie au travail, IA, web et outils numériques.</p>
 	</header>
 
 	<?php if ( have_posts() ) : ?>

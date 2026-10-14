@@ -37,13 +37,13 @@ while ( have_posts() ) :
 		</div>
 
 		<aside class="inline-cta" aria-labelledby="titre-cta-post">
-			<h2 id="titre-cta-post" class="label">Un sujet similaire chez vous ?</h2>
-			<p>Échangez 15 minutes avec un ingénieur MIB.</p>
-			<p><?php echo mib_cal_link( 'Planifier un audit technique', 'link-cta' ); // phpcs:ignore ?></p>
+			<h2 id="titre-cta-post" class="inline-cta-title">Un sujet similaire chez vous ?</h2>
+			<p>En 15 minutes, nous regardons votre situation et vous indiquons la priorité.</p>
+			<div><?php echo mib_cta_button(); // phpcs:ignore ?></div>
 		</aside>
 
 		<nav class="related" aria-labelledby="titre-expertises-post">
-			<h2 id="titre-expertises-post" class="label">Nos expertises</h2>
+			<h2 id="titre-expertises-post" class="label">Nos leviers d'intervention</h2>
 			<ul>
 				<?php foreach ( mib_cfg( 'expertises' ) as $mib_slug => $mib_e ) : ?>
 					<li><a href="<?php echo esc_url( mib_expertise_url( $mib_slug ) ); ?>"><?php echo esc_html( $mib_e['title'] ); ?> <?php echo mib_icon( 'arrow' ); // phpcs:ignore ?></a></li>

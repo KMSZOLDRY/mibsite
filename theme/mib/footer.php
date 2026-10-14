@@ -1,6 +1,6 @@
 <?php
 /**
- * Pied de page : conversion sans formulaire (mail chiffré + Cal.com), navigation, mentions.
+ * Pied de page : conversion sans formulaire (Cal.com + mail chiffré), navigation, mentions.
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,24 +13,20 @@ $mib_blog  = get_option( 'page_for_posts' ) ? get_permalink( get_option( 'page_f
 </main>
 
 <footer class="site-footer">
-	<section class="wrap footer-cta" aria-labelledby="titre-contact">
+	<section class="wrap footer-cta beam" aria-labelledby="titre-contact">
 		<h2 id="titre-contact" class="cta-title"><?php echo esc_html( $mib_f['cta_title'] ); ?></h2>
 		<p class="cta-text"><?php echo esc_html( $mib_f['cta_text'] ); ?></p>
 		<div class="cta-actions">
-			<p class="cta-channel">
-				<span class="label">Écrire</span>
-				<?php echo mib_email_link( 'cta-mail' ); // phpcs:ignore ?>
-				<span class="note"><?php echo esc_html( $mib_f['reply'] ); ?></span>
-			</p>
-			<p class="cta-channel">
-				<span class="label">Planifier</span>
-				<?php echo mib_cal_link( 'Audit technique de 15 min', 'link-cta cta-cal' ); // phpcs:ignore ?>
-				<span class="note">Visio, sans engagement</span>
-			</p>
+			<?php echo mib_cta_button(); // phpcs:ignore ?>
 		</div>
+		<p class="cta-mail-line">Ou par e-mail : <?php echo mib_email_link( 'cta-mail' ); // phpcs:ignore ?> <span class="note">— <?php echo esc_html( $mib_f['reply'] ); ?></span></p>
 	</section>
 
 	<div class="wrap footer-bottom">
+		<div class="footer-brand">
+			<?php echo mib_logo(); // phpcs:ignore ?>
+			<?php echo mib_signature(); // phpcs:ignore ?>
+		</div>
 		<nav class="footer-nav" aria-label="Plan du site">
 			<ul>
 				<?php foreach ( mib_cfg( 'expertises' ) as $mib_slug => $mib_e ) : ?>
@@ -46,7 +42,7 @@ $mib_blog  = get_option( 'page_for_posts' ) ? get_permalink( get_option( 'page_f
 			<li><a href="<?php echo esc_url( home_url( $mib_pages['privacy'] ) ); ?>">Confidentialité</a></li>
 			<li><a href="<?php echo esc_url( home_url( $mib_pages['accessibility'] ) ); ?>">Accessibilité</a></li>
 			<li><?php echo esc_html( $mib_legal['host_note'] ); ?></li>
-			<li>© <?php echo esc_html( gmdate( 'Y' ) ); ?> MIB — Maninback</li>
+			<li>© <?php echo esc_html( gmdate( 'Y' ) ); ?> MIB — Man in Back</li>
 		</ul>
 	</div>
 </footer>
