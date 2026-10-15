@@ -137,3 +137,17 @@ function mib_signature( $tag = 'p' ) {
 	$s = mib_cfg( 'brand' )['signature'];
 	return sprintf( '<%1$s class="signature">%2$s <span>%3$s</span></%1$s>', tag_escape( $tag ), esc_html( $s[0] ), esc_html( $s[1] ) );
 }
+
+/**
+ * Bloc dépliable natif « En savoir plus » (HTML <details>, aucun JavaScript).
+ */
+function mib_more( $paragraphs, $summary = 'En savoir plus' ) {
+	if ( empty( $paragraphs ) ) {
+		return '';
+	}
+	$out = '<details class="more"><summary>' . esc_html( $summary ) . '</summary><div class="more-body">';
+	foreach ( (array) $paragraphs as $p ) {
+		$out .= '<p>' . esc_html( $p ) . '</p>';
+	}
+	return $out . '</div></details>';
+}

@@ -25,7 +25,7 @@ $mib_x     = mib_cfg( 'expertises' );
 			}
 			?>
 		</h1>
-		<p class="hero-lead"><?php echo esc_html( $mib_brand['description'] ); ?></p>
+		<p class="hero-lead"><?php echo esc_html( $mib_brand['hero_lead'] ); ?></p>
 		<div class="hero-cta"><?php echo mib_cta_button(); // phpcs:ignore ?></div>
 	</div>
 </section>
@@ -36,6 +36,7 @@ $mib_x     = mib_cfg( 'expertises' );
 		<p class="label"><?php echo esc_html( $mib_s['label'] ); ?></p>
 		<h2 id="titre-probleme" class="section-title"><?php echo esc_html( $mib_s['title'] ); ?></h2>
 		<p class="section-text"><?php echo esc_html( $mib_s['text'] ); ?></p>
+		<?php echo mib_more( $mib_s['more'] ?? array() ); // phpcs:ignore ?>
 	</div>
 	<ul class="pains">
 		<?php foreach ( $mib_s['pains'] as $mib_p ) : ?>
@@ -55,6 +56,7 @@ $mib_x     = mib_cfg( 'expertises' );
 		<p class="label"><?php echo esc_html( $mib_s['label'] ); ?></p>
 		<h2 id="titre-reponse" class="section-title"><?php echo esc_html( $mib_s['title'] ); ?></h2>
 		<p class="section-text"><?php echo esc_html( $mib_s['text'] ); ?></p>
+		<?php echo mib_more( $mib_s['more'] ?? array() ); // phpcs:ignore ?>
 	</div>
 	<figure class="loop">
 		<ol class="loop-steps">
@@ -125,9 +127,9 @@ $mib_x     = mib_cfg( 'expertises' );
 		<h2 id="titre-about" class="section-title section-title--xl"><?php echo esc_html( $mib_s['title'] ); ?></h2>
 	</div>
 	<div class="about-body">
-		<?php foreach ( $mib_s['text'] as $mib_i => $mib_t ) : ?>
-			<p<?php echo count( $mib_s['text'] ) - 1 === $mib_i ? ' class="about-punch"' : ''; ?>><?php echo esc_html( $mib_t ); ?></p>
-		<?php endforeach; ?>
+		<p class="about-punch"><?php echo esc_html( $mib_s['punch'] ); ?></p>
+		<p><?php echo esc_html( $mib_s['text'] ); ?></p>
+		<?php echo mib_more( $mib_s['more'], 'Qui sont les Man in Back ?' ); // phpcs:ignore ?>
 		<?php echo mib_signature(); // phpcs:ignore ?>
 	</div>
 </section>

@@ -19,6 +19,7 @@ return array(
 		'promise'     => 'Voir plus tôt. Comprendre plus vite. Agir au bon endroit.',
 		'signature'   => array( "Rendre visible l'intelligence", 'qui agit derrière la performance.' ),
 		'description' => "MIB relie la performance de vos équipes et celle de vos outils numériques. Nous repérons ce qui se dérègle, puis nous envoyons le bon spécialiste au bon endroit.",
+		'hero_lead'   => '25 métiers du digital. 15 experts de la performance humaine. Votre expert, nous l’avons.',
 		'email'       => 'contact@maninback.com',
 		'cal_url'     => 'https://cal.com/maninback/audit',
 		'city'        => 'Toulouse',
@@ -47,8 +48,12 @@ return array(
 
 		'problem' => array(
 			'label' => 'Le constat',
-			'title' => 'Le digital avance plus vite que vos équipes.',
-			'text'  => "Un nouvel outil, de l'IA, un site à refaire : chaque changement numérique a des effets humains. Charge mentale, perte de repères, fatigue, décrochage. Et l'inverse est vrai : un outil mal adopté ne rapporte rien.",
+			'title' => 'Le digital va plus vite que vos équipes.',
+			'text'  => 'Chaque nouvel outil a un effet humain. Nous le voyons avant vous.',
+			'more'  => array(
+				"IA, automatisation, nouveaux logiciels, travail hybride : chaque changement numérique modifie les rythmes, les compétences et la charge mentale. Fatigue, perte de repères, décrochage d'une partie de l'équipe.",
+				"L'inverse est vrai : un outil mal adopté ne rapporte rien. La performance digitale et la performance humaine forment une seule boucle. C'est elle que nous surveillons.",
+			),
 			'pains' => array(
 				array( 'q' => 'Mon site ne m’apporte aucun client.', 'to' => 'web-design-communication' ),
 				array( 'q' => 'Je n’ai plus d’énergie en fin de semaine.', 'to' => 'performance-humaine' ),
@@ -59,13 +64,17 @@ return array(
 
 		'answer' => array(
 			'label' => 'La réponse MIB',
-			'title' => "Rendre visibles les liens entre l'humain et le digital.",
-			'text'  => "Nous ne traitons pas votre site d'un côté et vos équipes de l'autre. Nous observons comment l'un agit sur l'autre, pour intervenir avant qu'un déséquilibre ne s'installe.",
+			'title' => 'Humain et digital : une seule boucle.',
+			'text'  => 'Une baisse n’est pas toujours un danger. Nous gardons votre cap.',
+			'more'  => array(
+				"Nous ne traitons pas votre site d'un côté et vos équipes de l'autre. Nous observons comment l'un agit sur l'autre : signaux faibles, tendances, premiers indices.",
+				"Nous intervenons avant qu'un déséquilibre ne s'installe, puis nous remesurons. Sans promettre de prédire l'avenir : nous le regardons venir.",
+			),
 			'loop'  => array(
-				array( 't' => 'Transformation digitale', 'd' => 'IA, automatisation, nouveaux outils, nouveaux usages' ),
-				array( 't' => "Effets sur l'humain", 'd' => 'Charge, repères, compétences, engagement' ),
-				array( 't' => 'Signaux faibles', 'd' => 'Premiers indices, tendances, évolutions' ),
-				array( 't' => 'Intervention ciblée', 'd' => 'Une action précise, puis une nouvelle mesure' ),
+				array( 't' => 'Transformation digitale', 'd' => 'IA, outils, nouveaux usages' ),
+				array( 't' => "Effets sur l'humain", 'd' => 'Charge, repères, engagement' ),
+				array( 't' => 'Signaux faibles', 'd' => 'Les premiers indices' ),
+				array( 't' => 'Intervention ciblée', 'd' => 'Une action, une nouvelle mesure' ),
 			),
 			'loop_note' => 'Observer · comprendre · intervenir · mesurer · adapter',
 		),
@@ -91,10 +100,12 @@ return array(
 		'about' => array(
 			'label' => 'Qui sommes-nous',
 			'title' => 'Les Man in Back.',
-			'text'  => array(
+			'punch' => 'MIB dans votre équipe. L’avance sur vos concurrents.',
+			'text'  => 'On ne nous voit pas. On voit les résultats.',
+			'more'  => array(
 				"Nous sommes partis d'un constat : la technologie évolue parfois plus vite que notre capacité collective à nous adapter. Ce qui commence comme une transformation digitale peut devenir, petit à petit, un enjeu humain.",
-				"MIB se place à cette jonction. Coachs en préparation physique et mentale, spécialistes RSE, ingénieurs data et réseaux, développeurs web et applicatifs, designers, graphistes, experts en marketing et en communication : vous avez un interlocuteur, et derrière lui, l'équipe qu'il faut à votre situation.",
-				'On ne nous voit pas. On voit les résultats.',
+				"MIB se place à cette jonction. 25 métiers du digital : ingénieurs data et réseaux, développeurs web et applicatifs, designers, graphistes, experts en marketing et en communication. 15 experts de la performance humaine : professionnels de santé diplômés, coachs en préparation physique et mentale, spécialistes RSE.",
+				"Vous avez un interlocuteur. Derrière lui, l'équipe qu'il faut à votre situation.",
 			),
 		),
 
@@ -102,10 +113,10 @@ return array(
 			'label' => 'Confiance',
 			'title' => 'Un cadre clair. Aucune promesse en l’air.',
 			'items' => array(
-				array( 't' => 'Aucune donnée conservée', 'd' => 'Les réponses recueillies servent au diagnostic, puis sont supprimées.' ),
-				array( 't' => 'Anonymat des équipes', 'd' => 'Nous restituons des tendances, jamais des réponses individuelles.' ),
-				array( 't' => 'Une méthode documentée', 'd' => 'Présentée dès le premier échange. Vous savez ce que nous mesurons et pourquoi.' ),
-				array( 't' => 'Aucun chiffre inventé', 'd' => 'Les seuls résultats que nous citons sont ceux mesurés chez vous.' ),
+				array( 't' => 'Santé : des professionnels diplômés', 'd' => 'Uniquement. Sans exception.' ),
+				array( 't' => 'Aucune donnée conservée', 'd' => 'Utilisées pour le diagnostic, puis supprimées.' ),
+				array( 't' => 'Anonymat des équipes', 'd' => 'Des tendances, jamais de réponses individuelles.' ),
+				array( 't' => 'Aucun chiffre inventé', 'd' => 'Seuls comptent les résultats mesurés chez vous.' ),
 			),
 		),
 	),
@@ -149,8 +160,8 @@ return array(
 	),
 
 	'footer' => array(
-		'cta_title' => 'Parlons de votre situation.',
-		'cta_text'  => "Votre site, vos outils, votre organisation ou l'énergie de vos équipes : en 15 minutes, nous identifions où agir en premier.",
+		'cta_title' => 'Diagnostic gratuit.',
+		'cta_text'  => 'Failles de données, visibilité en ligne, énergie des équipes. Nous repérons vos frictions avant qu’elles coûtent.',
 		'reply'     => 'Réponse sous 24 heures ouvrées',
 	),
 
