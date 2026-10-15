@@ -19,7 +19,7 @@ return array(
 		'promise'     => 'Voir plus tôt. Comprendre plus vite. Agir au bon endroit.',
 		'signature'   => array( "Rendre visible l'intelligence", 'qui agit derrière la performance.' ),
 		'description' => "MIB relie la performance de vos équipes et celle de vos outils numériques. Nous repérons ce qui se dérègle, puis nous envoyons le bon spécialiste au bon endroit.",
-		'hero_lead'   => '25 métiers du digital. 15 experts de la performance humaine. Votre expert, nous l’avons.',
+		'hero_lead'   => 'Plus de 25 métiers du digital. Plus de 15 experts en santé, fluidité, bien-être et performance métier. Votre expert, nous l’avons.',
 		'email'       => 'contact@maninback.com',
 		'cal_url'     => 'https://cal.com/maninback/audit',
 		'city'        => 'Toulouse',
@@ -104,7 +104,7 @@ return array(
 			'text'  => 'On ne nous voit pas. On voit les résultats.',
 			'more'  => array(
 				"Nous sommes partis d'un constat : la technologie évolue parfois plus vite que notre capacité collective à nous adapter. Ce qui commence comme une transformation digitale peut devenir, petit à petit, un enjeu humain.",
-				"MIB se place à cette jonction. 25 métiers du digital : ingénieurs data et réseaux, développeurs web et applicatifs, designers, graphistes, experts en marketing et en communication. 15 experts de la performance humaine : professionnels de santé diplômés, coachs en préparation physique et mentale, spécialistes RSE.",
+				"MIB se place à cette jonction. Plus de 25 métiers du digital : ingénieurs data et réseaux, développeurs web et applicatifs, designers, graphistes, experts en marketing et en communication. Plus de 15 experts en santé, fluidité, bien-être et performance métier.",
 				"Vous avez un interlocuteur. Derrière lui, l'équipe qu'il faut à votre situation.",
 			),
 		),
@@ -113,9 +113,9 @@ return array(
 			'label' => 'Confiance',
 			'title' => 'Un cadre clair. Aucune promesse en l’air.',
 			'items' => array(
-				array( 't' => 'Santé : des professionnels diplômés', 'd' => 'Uniquement. Sans exception.' ),
 				array( 't' => 'Aucune donnée conservée', 'd' => 'Utilisées pour le diagnostic, puis supprimées.' ),
 				array( 't' => 'Anonymat des équipes', 'd' => 'Des tendances, jamais de réponses individuelles.' ),
+				array( 't' => 'Une méthode documentée', 'd' => 'Présentée dès le premier échange.' ),
 				array( 't' => 'Aucun chiffre inventé', 'd' => 'Seuls comptent les résultats mesurés chez vous.' ),
 			),
 		),
