@@ -11,9 +11,7 @@ get_header(); ?>
 
 <title>Diagnostic MIB</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap">
+<!-- Montserrat chargé via mib.css (woff2 auto-hébergés dans le thème) -->
 <style>
 /* =========================================================
    PAGE DIAGNOSTIC MIB — styles spécifiques à cette page
