@@ -25,6 +25,7 @@ while ( have_posts() ) :
 				Nom commercial : <?php echo esc_html( $mib_l['trade_name'] ); ?><br>
 				SIRET : <?php echo esc_html( $mib_l['siret'] ); ?><br>
 				Adresse : <?php echo esc_html( $mib_l['address'] ); ?><br>
+				Téléphone : <a href="tel:+33660619661"><?php echo esc_html( $mib_l['phone'] ); ?></a><br>
 				Contact : <?php echo mib_email_link(); // phpcs:ignore ?>
 			</p>
 

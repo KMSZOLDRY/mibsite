@@ -209,6 +209,7 @@ return array(
 		'status'       => 'Entrepreneur individuel',
 		'trade_name'   => 'Manager In Business (MIB)',
 		'siret'        => '525 404 695 00039',
+		'phone'        => '06 60 61 96 61',
 		'address'      => 'Appartement D117, 21 rue Simone Boudet, 31200 Toulouse, France',
 		'director'     => 'SEREGE JUNIOR',
 		'host_name'    => 'OVH SAS',
