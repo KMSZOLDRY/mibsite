@@ -1,6 +1,6 @@
 <?php
 /**
- * Pied de page : conversion sans formulaire (Cal.com + mail chiffré), navigation, mentions.
+ * Pied de page : conversion sans formulaire (rendez-vous ou e-mail chiffré), navigation, mentions.
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -42,7 +42,7 @@ $mib_blog  = get_option( 'page_for_posts' ) ? get_permalink( get_option( 'page_f
 			<li><a href="<?php echo esc_url( home_url( $mib_pages['privacy'] ) ); ?>">Confidentialité</a></li>
 			<li><a href="<?php echo esc_url( home_url( $mib_pages['accessibility'] ) ); ?>">Accessibilité</a></li>
 			<li><?php echo esc_html( $mib_legal['host_note'] ); ?></li>
-			<li>© <?php echo esc_html( gmdate( 'Y' ) ); ?> MIB — Man in Back</li>
+			<li>© <?php echo esc_html( gmdate( 'Y' ) ); ?> MIB — Manager In Business · <?php echo esc_html( mib_cfg( 'brand' )['tagline'] ); ?></li>
 		</ul>
 	</div>
 </footer>

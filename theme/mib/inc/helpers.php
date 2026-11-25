@@ -53,15 +53,33 @@ function mib_email_link( $class = '' ) {
 }
 
 /**
- * Lien Cal.com de prise de rendez-vous.
+ * Adresse de prise de contact : lien de rendez-vous s'il existe, sinon e-mail
+ * pré-rempli (adresse encodée en entités contre les robots collecteurs).
+ *
+ * @return array{0:string,1:bool} URL déjà échappée, et vrai si lien externe.
  */
-function mib_cal_link( $label = 'Planifier un audit de 15 min', $class = 'link-cta' ) {
+function mib_contact_href( $subject = 'Mon audit offert' ) {
+	$cal = mib_cfg( 'brand' )['cal_url'];
+	if ( ! empty( $cal ) ) {
+		return array( esc_url( $cal ), true );
+	}
+	$mail = antispambot( mib_cfg( 'brand' )['email'], 1 );
+	return array( esc_attr( 'mailto:' . $mail . '?subject=' . rawurlencode( $subject ) ), false );
+}
+
+/**
+ * Lien de prise de rendez-vous (ou e-mail tant que l'agenda n'existe pas).
+ */
+function mib_cal_link( $label = 'Demander mon audit offert', $class = 'link-cta' ) {
+	list( $href, $ext ) = mib_contact_href();
 	return sprintf(
-		'<a class="%s" href="%s" rel="noopener" target="_blank">%s %s<span class="sr-only"> (nouvel onglet)</span></a>',
+		'<a class="%s" href="%s"%s>%s %s%s</a>',
 		esc_attr( $class ),
-		esc_url( mib_cfg( 'brand' )['cal_url'] ),
+		$href,
+		$ext ? ' rel="noopener" target="_blank"' : '',
 		esc_html( $label ),
-		mib_icon( 'arrow' )
+		mib_icon( 'arrow' ),
+		$ext ? '<span class="sr-only"> (nouvel onglet)</span>' : ''
 	);
 }
 
@@ -102,27 +120,30 @@ function mib_reading_time( $post = null ) {
 }
 
 /**
- * Logo typographique : « MIB » doré (dégradé CSS) + « Man in Back ».
+ * Logo typographique : « MIB » doré (dégradé CSS) + « Manager In Business ».
  */
 function mib_logo( $current = false ) {
 	return sprintf(
-		'<a class="logo" href="%s"%s><span class="logo-mark">MIB</span><span class="logo-sub">Man in Back</span><span class="sr-only"> — accueil</span></a>',
+		'<a class="logo" href="%s"%s><span class="logo-mark">MIB</span><span class="logo-sub">Manager In Business</span><span class="sr-only"> — accueil</span></a>',
 		esc_url( home_url( '/' ) ),
 		$current ? ' aria-current="page"' : ''
 	);
 }
 
 /**
- * Bouton d'appel à l'action unique (Cal.com) + ligne de réassurance.
+ * Bouton d'appel à l'action unique + ligne de réassurance.
  */
-function mib_cta_button( $with_note = true, $class = '' ) {
+function mib_cta_button( $with_note = true, $class = '', $label = null, $subject = 'Mon audit offert' ) {
 	$cta = mib_cfg( 'cta' );
+	list( $href, $ext ) = mib_contact_href( $subject );
 	$out = sprintf(
-		'<a class="btn %s" href="%s" rel="noopener" target="_blank">%s %s<span class="sr-only"> (nouvel onglet)</span></a>',
+		'<a class="btn %s" href="%s"%s>%s %s%s</a>',
 		esc_attr( $class ),
-		esc_url( mib_cfg( 'brand' )['cal_url'] ),
-		esc_html( $cta['label'] ),
-		mib_icon( 'arrow' )
+		$href,
+		$ext ? ' rel="noopener" target="_blank"' : '',
+		esc_html( $label ?? $cta['label'] ),
+		mib_icon( 'arrow' ),
+		$ext ? '<span class="sr-only"> (nouvel onglet)</span>' : ''
 	);
 	if ( $with_note ) {
 		$out .= '<p class="btn-note">' . esc_html( $cta['note'] ) . '</p>';

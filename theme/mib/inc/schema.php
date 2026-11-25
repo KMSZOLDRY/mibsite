@@ -17,7 +17,7 @@ function mib_print_schema() {
 		'@type'         => 'ProfessionalService',
 		'@id'           => $org_id,
 		'name'          => $brand['name'],
-		'alternateName' => array( $brand['long_name'], 'Maninback' ),
+		'alternateName' => array( $brand['long_name'], $brand['vision'] ),
 		'slogan'        => implode( ' ', $brand['signature'] ),
 		'url'           => $home,
 		'email'         => $brand['email'],
@@ -121,7 +121,7 @@ add_action(
 		} elseif ( is_singular() ) {
 			$desc = wp_strip_all_tags( get_the_excerpt( get_queried_object() ) );
 		} elseif ( is_home() ) {
-			$desc = "Analyses et retours de terrain des Man in Back : performance humaine, qualité de vie au travail, IA, web et outils numériques.";
+			$desc = "Analyses et retours de terrain de Manager In Business : performance humaine, qualité de vie au travail, IA, web et outils numériques.";
 		}
 		if ( $desc ) {
 			printf( '<meta name="description" content="%s">' . "\n", esc_attr( wp_html_excerpt( $desc, 160, '…' ) ) );

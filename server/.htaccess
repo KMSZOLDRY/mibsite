@@ -12,9 +12,9 @@ ServerSignature Off
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^ https://maninback.com%{REQUEST_URI} [L,R=301]
-RewriteCond %{HTTP_HOST} ^www\.maninback\.com$ [NC]
-RewriteRule ^ https://maninback.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://managerinbusiness.com%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.managerinbusiness\.com$ [NC]
+RewriteRule ^ https://managerinbusiness.com%{REQUEST_URI} [L,R=301]
 </IfModule>
 
 # --- 2. En-têtes de sécurité -----------------------------------------------

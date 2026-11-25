@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Appel de wp-cron.php
-        run: curl -fsS --max-time 60 "https://maninback.com/wp-cron.php?doing_wp_cron" -o /dev/null
+        run: curl -fsS --max-time 60 "https://managerinbusiness.com/wp-cron.php?doing_wp_cron" -o /dev/null
