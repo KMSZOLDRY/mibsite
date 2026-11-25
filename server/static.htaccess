@@ -1,0 +1,45 @@
+# =========================================================================
+# MIB — .htaccess de la version HTML statique (hébergement gratuit OVH).
+# Généré dans dist/.htaccess par tools/build-static.php.
+# =========================================================================
+
+Options -Indexes
+ServerSignature Off
+ErrorDocument 404 /404.html
+
+# HTTPS forcé + domaine canonique sans www
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://managerinbusiness.com%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.managerinbusiness\.com$ [NC]
+RewriteRule ^ https://managerinbusiness.com%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# En-têtes de sécurité (aucun script ni ressource tierce)
+<IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
+Header always set Cross-Origin-Opener-Policy "same-origin"
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+Header always unset X-Powered-By
+<FilesMatch "\.(css|js|woff2)$">
+	Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.html$">
+	Header set Cache-Control "public, max-age=600"
+</FilesMatch>
+</IfModule>
+
+<FilesMatch "^(\.htaccess|.*\.(log|bak|ini|sh|md|php))$">
+	Require all denied
+</FilesMatch>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/javascript application/xml image/svg+xml
+</IfModule>
+AddType font/woff2 .woff2

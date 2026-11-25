@@ -1,4 +1,4 @@
-# MIB — maninback.com
+# MIB — managerinbusiness.com
 # Moteurs de recherche et assistants IA : bienvenue sur tout le contenu public.
 
 User-agent: *
@@ -33,4 +33,4 @@ User-agent: omgili
 User-agent: omgilibot
 Disallow: /
 
-Sitemap: https://maninback.com/sitemap.xml
+Sitemap: https://managerinbusiness.com/sitemap.xml

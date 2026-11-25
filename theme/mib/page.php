@@ -36,7 +36,7 @@ while ( have_posts() ) :
 		<?php if ( $mib_x ) : ?>
 			<aside class="inline-cta" aria-labelledby="titre-cta-page">
 				<h2 id="titre-cta-page" class="inline-cta-title">Où agir en premier ?</h2>
-				<p>En 15 minutes, nous regardons votre situation et vous indiquons la priorité.</p>
+				<p>Premier audit offert : nous regardons votre situation et vous indiquons la priorité.</p>
 				<div><?php echo mib_cta_button(); // phpcs:ignore ?></div>
 			</aside>
 

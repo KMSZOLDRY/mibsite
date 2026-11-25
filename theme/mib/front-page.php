@@ -16,7 +16,7 @@ $mib_x     = mib_cfg( 'expertises' );
 
 <section class="hero beam" aria-labelledby="titre-hero">
 	<div class="wrap hero-inner">
-		<p class="label label--sage">Humain × Digital</p>
+		<p class="label label--sage"><?php echo esc_html( $mib_brand['tagline'] ); ?> · <?php echo esc_html( $mib_brand['vision'] ); ?></p>
 		<h1 id="titre-hero" class="hero-title">
 			<?php
 			$mib_parts = preg_split( '/(?<=\.)\s+/u', $mib_brand['promise'] );
@@ -43,6 +43,7 @@ $mib_x     = mib_cfg( 'expertises' );
 			<li>
 				<a class="pain" href="<?php echo esc_url( mib_expertise_url( $mib_p['to'] ) ); ?>">
 					<span class="pain-q">«&nbsp;<?php echo esc_html( $mib_p['q'] ); ?>&nbsp;»</span>
+					<?php if ( ! empty( $mib_p['a'] ) ) : ?><span class="pain-a"><?php echo esc_html( $mib_p['a'] ); ?></span><?php endif; ?>
 					<span class="pain-to"><?php echo esc_html( $mib_x[ $mib_p['to'] ]['title'] ); ?> <?php echo mib_icon( 'arrow' ); // phpcs:ignore ?></span>
 				</a>
 			</li>
@@ -120,6 +121,49 @@ $mib_x     = mib_cfg( 'expertises' );
 	</div>
 </section>
 
+<?php $mib_s = $mib_h['gains']; ?>
+<section id="gains" class="section wrap" aria-labelledby="titre-gains">
+	<div class="section-head">
+		<p class="label"><?php echo esc_html( $mib_s['label'] ); ?></p>
+		<h2 id="titre-gains" class="section-title"><?php echo esc_html( $mib_s['title'] ); ?></h2>
+		<p class="section-text"><?php echo esc_html( $mib_s['text'] ); ?></p>
+	</div>
+	<div class="gains-wrap">
+		<table class="gains">
+			<thead><tr><th scope="col">Métier</th><th scope="col">À 3 mois</th><th scope="col">À 6 mois</th><th scope="col">Croissance</th><th scope="col">Temps</th></tr></thead>
+			<tbody>
+				<?php foreach ( $mib_s['rows'] as $mib_r ) : ?>
+					<tr><th scope="row"><?php echo esc_html( $mib_r['who'] ); ?></th><td><?php echo esc_html( $mib_r['m3'] ); ?></td><td class="gold"><?php echo esc_html( $mib_r['m6'] ); ?></td><td><?php echo esc_html( $mib_r['pct'] ); ?></td><td><?php echo esc_html( $mib_r['hours'] ); ?></td></tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+	<p class="section-note"><?php echo esc_html( $mib_s['note'] ); ?></p>
+</section>
+
+<?php $mib_s = $mib_h['pack']; ?>
+<section id="pack-mobile" class="section wrap" aria-labelledby="titre-pack">
+	<div class="pack">
+		<div>
+			<p class="label"><?php echo esc_html( $mib_s['label'] ); ?></p>
+			<h2 id="titre-pack" class="section-title"><?php echo esc_html( $mib_s['title'] ); ?></h2>
+			<p class="section-text"><?php echo esc_html( $mib_s['text'] ); ?></p>
+			<ul class="pack-list">
+				<?php foreach ( $mib_s['items'] as $mib_it ) : ?>
+					<li><?php echo esc_html( $mib_it ); ?></li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+		<div class="pack-offer">
+			<p class="pack-price"><span class="gold"><?php echo esc_html( $mib_s['founder'] ); ?></span> <span class="pack-then">puis <?php echo esc_html( $mib_s['price'] ); ?></span></p>
+			<p class="pack-founder"><?php echo esc_html( $mib_s['founder_note'] ); ?></p>
+			<p class="pack-guarantee"><?php echo esc_html( $mib_s['guarantee'] ); ?></p>
+			<?php echo mib_cta_button( false, '', 'Je veux le Pack Mobile Express', 'Pack Mobile Express' ); // phpcs:ignore ?>
+			<p class="btn-note"><?php echo esc_html( $mib_s['terms'] ); ?></p>
+		</div>
+	</div>
+</section>
+
 <?php $mib_s = $mib_h['about']; ?>
 <section id="qui-sommes-nous" class="section wrap about" aria-labelledby="titre-about">
 	<div class="section-head">
@@ -129,7 +173,7 @@ $mib_x     = mib_cfg( 'expertises' );
 	<div class="about-body">
 		<p class="about-punch"><?php echo esc_html( $mib_s['punch'] ); ?></p>
 		<p><?php echo esc_html( $mib_s['text'] ); ?></p>
-		<?php echo mib_more( $mib_s['more'], 'Qui sont les Man in Back ?' ); // phpcs:ignore ?>
+		<?php echo mib_more( $mib_s['more'], 'Qui sommes-nous ?' ); // phpcs:ignore ?>
 		<?php echo mib_signature(); // phpcs:ignore ?>
 	</div>
 </section>

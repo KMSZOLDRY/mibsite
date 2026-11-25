@@ -295,7 +295,7 @@ footer.diag-footer{padding-block:28px;border-top:1px solid var(--ligne);color:va
         <h2>C'est noté.</h2>
         <p class="hint" id="recap"></p>
         <p class="note">Vous recevrez le rapport sous 48 h ouvrées. Pour choisir votre créneau dès maintenant :</p>
-        <a class="btn" href="https://cal.com/maninback/audit" target="_blank" rel="noopener" style="margin-top:12px;display:inline-flex">Réserver mon créneau</a>
+        <a class="btn" href="mailto:contact@managerinbusiness.com?subject=Mon%20audit%20offert" style="margin-top:12px;display:inline-flex">Demander mon audit offert</a>
         <p class="err" id="err5" hidden style="margin-top:12px"></p>
       </div>
     </div>
@@ -580,7 +580,7 @@ footer.diag-footer{padding-block:28px;border-top:1px solid var(--ligne);color:va
       }
     })
     .catch(function(){
-      err.textContent="Une erreur est survenue. Réessayez ou écrivez-nous à contact@maninback.com";
+      err.textContent="Une erreur est survenue. Réessayez ou écrivez-nous à contact@managerinbusiness.com";
       err.hidden=false;
       btn.disabled=false;
       btn.textContent="Choisir mon créneau →";

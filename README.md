@@ -1,6 +1,6 @@
-# MIB — maninback.com
+# MIB — managerinbusiness.com
 
-Site de MIB — Man in Back, système d'anticipation et d'intervention Humain × Digital. WordPress « CMS Green » : thème sur mesure, zéro image, zéro dépendance tierce, budget 150 Ko par page.
+Site de MIB — Manager In Business (Management Intelligence & Business), agence Digital & Humain. WordPress « CMS Green » : thème sur mesure, zéro image, zéro dépendance tierce, budget 150 Ko par page.
 
 ## Structure
 
@@ -12,14 +12,24 @@ Site de MIB — Man in Back, système d'anticipation et d'intervention Humain ×
 | `.github/workflows/` | `ci.yml` (contrôles + déploiement SSH), `cron.yml` (cron WordPress horaire) | — |
 | `tools/check-budgets.sh` | Bloque le déploiement si un asset dépasse son budget | — |
 
-## Mesures locales (thème v2, charte Man in Back)
+## Mesures locales (thème v2, charte MIB)
 
 - Accueil : 5 requêtes · 60 Ko non compressés · Lighthouse 100/100/100/100 mobile et desktop · LCP 1,3 s mobile / 0,4 s desktop · CLS 0.
 - Page levier : 51 Ko · 100/100/100/100.
 
-## Mise en service (une seule fois)
+## Mise en ligne immédiate : version HTML statique (hébergement gratuit OVH)
 
-1. **OVH** : installer WordPress (module en 1 clic) sur `maninback.com`, activer le SSL, PHP 8.3.
+`managerinbusiness.com` est aujourd'hui sur l'offre gratuite OVH (100 Mo, sans PHP ni MySQL). On y dépose une version HTML générée depuis le même thème :
+
+1. `php tools/build-static.php` → dossier `dist/` (8 pages, ~220 Ko, Lighthouse 100/100/100/100 mobile).
+2. Envoyer **le contenu** de `dist/` (dont le fichier caché `.htaccess`) dans le dossier `www/` de l'hébergement, par FTP (`ftp.cluster129.hosting.ovh.net`, identifiant `managei`). Le mot de passe FTP reste dans le `.env` du PC, jamais dans le dépôt.
+3. Vérifier `https://managerinbusiness.com` (SSL actif) puis la note PageSpeed mobile.
+
+Les textes se modifient toujours dans `theme/mib/config/site.php`, puis on régénère `dist/`.
+
+## Mise en service WordPress (une seule fois)
+
+1. **OVH** : installer WordPress (module en 1 clic) sur `managerinbusiness.com` (nécessite un hébergement avec PHP/MySQL : l'offre gratuite 100 Mo ne suffit pas), activer le SSL, PHP 8.3.
 2. **Clé SSH** : générer une clé `ed25519` dédiée au déploiement, ajouter la clé publique dans OVH (accès SSH de l'hébergement).
 3. **GitHub → Settings → Secrets and variables → Actions** :
    - secrets `OVH_SSH_HOST`, `OVH_SSH_USER`, `OVH_SSH_KEY` (clé privée), `OVH_WP_PATH` (ex. `/home/xxxx/www`) ;

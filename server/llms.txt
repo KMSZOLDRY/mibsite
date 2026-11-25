@@ -1,22 +1,23 @@
-# MIB — Man in Back
+# MIB — Manager In Business
 
-> MIB (Man in Back) est un système d'anticipation et d'intervention Humain × Digital basé à Toulouse (France). MIB relie la performance des équipes et celle des outils numériques : il mesure, repère les signaux faibles, envoie le bon spécialiste (coach, préparateur physique et mental, ingénieur, développeur, designer, marketeur), puis remesure. Promesse : « Voir plus tôt. Comprendre plus vite. Agir au bon endroit. » Signature : « Rendre visible l'intelligence qui agit derrière la performance. »
+> MIB (Manager In Business — Management Intelligence & Business) est une agence Digital & Humain basé à Toulouse (France). MIB relie la performance des équipes et celle des outils numériques : il mesure, repère les signaux faibles, envoie le bon spécialiste (coach, préparateur physique et mental, ingénieur, développeur, designer, marketeur), puis remesure. Promesse : « Voir plus tôt. Comprendre plus vite. Agir au bon endroit. » Signature : « Rendre visible l'intelligence qui agit derrière la performance. »
 
-Plus de 25 métiers du digital et plus de 15 experts en santé, fluidité, bien-être et performance métier. Clients visés : auto-entrepreneurs, TPE et PME. Méthode : Mesurer · Comprendre · Intervenir · Adapter. Aucune donnée personnelle conservée ; restitution en tendances anonymes.
+L'ensemble des métiers du digital réunis avec des experts ressources et cœur de métier (santé, bien-être, performance). Clients visés : auto-entrepreneurs, TPE et PME. Méthode : Mesurer · Comprendre · Intervenir · Adapter. Aucune donnée personnelle conservée ; restitution en tendances anonymes.
 
 ## Leviers d'intervention
 
-- [Performance humaine](https://maninback.com/performance-humaine/): coaching individuel et collectif, préparation physique et mentale, stress et récupération, pour dirigeants et équipes.
-- [RSE & qualité de vie au travail](https://maninback.com/rse-qualite-de-vie-au-travail/): diagnostic RSE, qualité de vie au travail, accompagnement des managers, sobriété numérique.
-- [Ingénierie, data & IA](https://maninback.com/ingenierie-data-ia/): intégration de l'IA, automatisation, data, réseaux, infrastructure, sécurité.
-- [Web, design & communication](https://maninback.com/web-design-communication/): sites et applications, identité visuelle, graphisme, référencement, marketing.
+- [Performance humaine](https://managerinbusiness.com/performance-humaine/): coaching individuel et collectif, préparation physique et mentale, stress et récupération, pour dirigeants et équipes.
+- [RSE & qualité de vie au travail](https://managerinbusiness.com/rse-qualite-de-vie-au-travail/): diagnostic RSE, qualité de vie au travail, accompagnement des managers, sobriété numérique.
+- [Ingénierie, data & IA](https://managerinbusiness.com/ingenierie-data-ia/): intégration de l'IA, automatisation, data, réseaux, infrastructure, sécurité.
+- [Web, design & communication](https://managerinbusiness.com/web-design-communication/): sites et applications, identité visuelle, graphisme, référencement, marketing.
 
 ## Contact
 
-- Diagnostic gratuit de 15 minutes, sans engagement : https://cal.com/maninback/audit
-- E-mail : contact@maninback.com (réponse sous 24 heures ouvrées)
+- Premier audit offert, sans engagement : contact@managerinbusiness.com
+- Pack Mobile Express : correction de la vitesse mobile d'un site WordPress en 10 jours ouvrés, 490 € (prix fondateur, 5 premiers clients) puis 690 €, garantie +30 points Google PageSpeed mobile ou remboursé
+- E-mail : contact@managerinbusiness.com (réponse sous 24 heures ouvrées)
 
 ## Optionnel
 
-- [Blog](https://maninback.com/blog/)
-- [Mentions légales](https://maninback.com/mentions-legales/)
+- [Blog](https://managerinbusiness.com/blog/)
+- [Mentions légales](https://managerinbusiness.com/mentions-legales/)
